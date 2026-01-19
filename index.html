@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-icon">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                        <rect x="9" y="3" width="6" height="4" rx="1"/>
+                        <path d="M9 12l2 2l4-4"/>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1>Task Manager</h1>
+                    <p>Organize and track your tasks efficiently</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Dashboard Stats -->
+                <div class="dashboard">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-icon blue">
+                                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 6h13"/>
+                                    <path d="M8 12h13"/>
+                                    <path d="M8 18h13"/>
+                                    <path d="M3 6h.01"/>
+                                    <path d="M3 12h.01"/>
+                                    <path d="M3 18h.01"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <p>Total Tasks</p>
+                                <h2>5</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-icon green">
+                                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <p>Completed</p>
+                                <h2>2</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-icon orange">
+                                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <p>Pending</p>
+                                <h2>3</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-label">Progress</span>
+                        <span class="progress-value">40%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+
+                <!-- Task Form -->
+                <div class="task-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Add a new task..." />
+                        <div class="form-row">
+                            <input type="text" placeholder="Description (optional)" />
+                            <button class="btn btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                Add Task
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search tasks..." />
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <button class="btn btn-outline active">All (5)</button>
+                    <button class="btn btn-outline">Pending (3)</button>
+                    <button class="btn btn-outline">Completed (2)</button>
+                </div>
+
+                <!-- Task List -->
+                <div class="task-list">
+                    <!-- Task Item 1 -->
+                    <div class="task-item">
+                        <div class="task-content">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox" />
+                            </div>
+                            <div class="task-details">
+                                <h3 class="task-title">Complete project documentation</h3>
+                                <p class="task-description">Write comprehensive docs for the new feature</p>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon edit">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon delete">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 2 (Completed) -->
+                    <div class="task-item">
+                        <div class="task-content">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox" checked />
+                            </div>
+                            <div class="task-details">
+                                <h3 class="task-title completed">Review pull requests</h3>
+                                <p class="task-description completed">Check and merge pending PRs</p>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon edit">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon delete">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 3 -->
+                    <div class="task-item">
+                        <div class="task-content">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox" />
+                            </div>
+                            <div class="task-details">
+                                <h3 class="task-title">Update dependencies</h3>
+                                <p class="task-description">Upgrade to latest versions</p>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon edit">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon delete">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 4 -->
+                    <div class="task-item">
+                        <div class="task-content">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox" />
+                            </div>
+                            <div class="task-details">
+                                <h3 class="task-title">Design system improvements</h3>
+                                <p class="task-description">Refactor components for better reusability</p>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon edit">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon delete">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 5 (Completed) -->
+                    <div class="task-item">
+                        <div class="task-content">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox" checked />
+                            </div>
+                            <div class="task-details">
+                                <h3 class="task-title completed">Fix responsive layout bugs</h3>
+                                <p class="task-description completed">Address mobile view issues</p>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon edit">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon delete">
+                                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
